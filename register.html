@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+        
+body {font-family: Arial, Helvetica, sans-serif;
+    background-color: #D0ECE7;}
+    
+    
+    input[type=text], input[type=password]  {
+      width: 900px;
+      padding: 12px 20px;
+      margin: 5px;
+      /* display: inline-block; */
+      border: 2px solid #000000;
+      /* box-sizing: border-box; */
+      border-radius: 10px;
+      
+    }
+    
+    button {
+      background-color: #16A085;
+      color: white;
+      padding: 14px 20px;
+      margin: auto;
+      border: none;
+      cursor: pointer;
+      border-radius: 17px;
+      border: solid;
+      width: 150px;
+    }
+        img {
+            height: 150px;
+            margin-bottom: 5%;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: 100px;
+            float: right;
+            margin-top: 50px;
+        }
+
+        #left {
+            width: 75%;
+            margin-left: 100px;
+            width: 900px;
+      padding: 12px 20px;
+      margin: 5px;
+      /* display: inline-block; */
+      /* border: 2px solid #000000; */
+      /* box-sizing: border-box; */
+      border-radius: 10px;
+
+        }
+        #status {
+    background-color: #c7f1e9;
+    visibility: hidden;
+    padding: 10px;
+    border-radius: 5px;
+ 
+}
+.containerreg{
+
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 200px;
+    border-radius: 10px
+}
+
+.button{
+   margin-left: 100px;
+   
+}
+
+input[type=text], input[type=password]  {
+      width: 500px;
+      padding: 12px 20px;
+      margin: 5px;
+      /* display: inline-block; */
+      border: 2px solid #000000;
+      /* box-sizing: border-box; */
+      border-radius: 10px;
+      
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="containerreg">
+
+        <div id="right">
+            <img src="robot.png" alt="">
+        </div>
+
+        <div id="left">
+            <h1> User Registration</h1>
+            <p id="status">Visible</p>
+
+            <form action="">
+                <div class="textfields">
+                <input onmouseout="hoverOut()" onclick="hover('Enter complete name.')" type="text" name="name"
+                    placeholder="Name"  required> <br>
+                <input onmouseout="hoverOut()" onclick="hover('Enter valid email address')" type="text" name="email"
+                    placeholder="Email Address" required /> <br>
+                <input onmouseout="hoverOut()" onclick="hover('Enter password')" type="password" name="password"
+                    placeholder="Password"  required>
+                <br>
+            </div>
+
+        </div>
+        <hr>
+
+        <div class="button">
+        <button type="submit" class="w3-button w3-teal">Sign Up</button>
+        <button type="reset" class="w3-button w3-teal">Clear</button>
+        <button type="submit" class="w3-button w3-teal"><a href="index.php" style="color: white">Log In</a></button>
+    </div>
+
+        </form>
+    </div>
+
+    <script>
+        $status = document.getElementById('status');
+
+        function hover(label) {
+            $status.innerHTML = label;
+            $status.style.visibility = "visible";
+        }
+
+        function hoverOut() {
+            $status.style.visibility = "hidden";
+        }
+    </script>
+</body>
+
+</html>
